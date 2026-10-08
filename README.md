@@ -1,26 +1,29 @@
-# seepsher-ui
+# @seppsher/ui
 
 Reusable Angular components and utilities for forms and HTTP feedback.
 
 ## Build
 
-From the repository root, install dependencies and build the library:
+Install dependencies and build the library:
 
 ```sh
 npm install
-npm run build:ui
+npm run build
 ```
 
-The package is generated in `projects/seepsher-ui/dist/`.
+The package is generated in `dist/`.
 
 ## Private GitHub Packages registry
 
-The package is published privately to GitHub Packages when a tag matching `seepsher-ui-v*` is pushed. The tag version must match the `version` in this package's `package.json`; for example, publish version `0.1.0` with:
+The package is published privately to GitHub Packages after a Release Please release is published. Releases are driven by Conventional Commits:
 
-```sh
-git tag seepsher-ui-v0.1.0
-git push origin seepsher-ui-v0.1.0
-```
+- `fix:` creates a patch release
+- `feat:` creates a minor release
+- A breaking change, marked with `!` (for example `feat!:`) or a `BREAKING CHANGE:` footer, creates a major release
+
+Push commits to `main`; Release Please opens or updates a release pull request with the version and changelog. Merging that pull request creates a GitHub release and publishes the package automatically.
+
+For the initial `0.1.0` release, create and publish a GitHub release tagged `v0.1.0` once the repository is set up. Later versions are released by merging the Release Please pull request. In the repository's Actions settings, allow GitHub Actions to create pull requests.
 
 To install it in a consuming project, configure `.npmrc`:
 
@@ -32,7 +35,7 @@ To install it in a consuming project, configure `.npmrc`:
 Set `GITHUB_TOKEN` to a GitHub token with `read:packages` access. Do not commit the token. Then install the package:
 
 ```sh
-npm install @seppsher/seepsher-ui
+npm install @seppsher/ui
 ```
 
 ## Public API

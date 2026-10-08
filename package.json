@@ -1,11 +1,10 @@
 {
-  "name": "@seppsher/seepsher-ui",
+  "name": "@seppsher/ui",
   "version": "0.1.0",
   "description": "Reusable Angular UI components, form utilities, and HTTP services.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/seppsher/e-commerce-angular.git",
-    "directory": "projects/seepsher-ui"
+    "url": "https://github.com/seppsher/seepsher-ui.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -26,6 +25,8 @@
   "devDependencies": {
     "@angular/cdk": "~22.0.2",
     "@angular/common": "^22.0.2",
+    "@angular/compiler": "^22.0.2",
+    "@angular/compiler-cli": "^22.0.2",
     "@angular/core": "^22.0.2",
     "@angular/forms": "^22.0.2",
     "@angular/material": "~22.0.2",
